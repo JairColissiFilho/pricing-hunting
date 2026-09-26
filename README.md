@@ -2,7 +2,7 @@
 
 Buscador de preços que consulta produtos na Kabum e mostra resultados com imagem, preço e link direto, com filtro por categoria e ordenação por preço.
 
-Projeto de estudo em Python (web scraping, Flask e pandas) e JavaScript puro no front-end.
+Projeto de estudo em Python (web scraping e Flask) e JavaScript puro no front-end.
 
 ## Funcionalidades
 
@@ -10,11 +10,10 @@ Projeto de estudo em Python (web scraping, Flask e pandas) e JavaScript puro no 
 - Mostra imagem, nome, preço (com e sem desconto) e link do produto
 - Classifica cada produto por categoria (placa de vídeo, PC gamer, notebook, etc.)
 - Filtro por categoria e ordenação por menor/maior preço
-- Histórico de preços: salva as buscas em CSV, um snapshot por dia, para acompanhar variação de preço ao longo do tempo
 
 ## Tecnologias
 
-- **Python**: `requests` + `BeautifulSoup` para o scraping, `Flask` como servidor web, `pandas` para o histórico em CSV
+- **Python**: `requests` + `BeautifulSoup` para o scraping, `Flask` como servidor web
 - **JavaScript, HTML e CSS**: front-end simples, sem framework
 
 ## Estrutura do projeto
@@ -23,7 +22,6 @@ Projeto de estudo em Python (web scraping, Flask e pandas) e JavaScript puro no 
 kabum.py           # scraper: busca produtos na Kabum e extrai nome, preço, imagem e link
 classificacao.py   # classifica cada produto por categoria, condição (novo/usado) e tags
 app.py             # servidor Flask: serve a página e a API de busca
-tabelas.py         # roda o scraper e salva o histórico de preços em tabelas/kabum.csv
 static/
   index.html       # página
   css/style.css
@@ -45,16 +43,6 @@ static/
    ```
 
 3. Abrir no navegador: [http://127.0.0.1:5000](http://127.0.0.1:5000)
-
-### Coletar histórico de preços
-
-Para salvar a busca de hoje em `tabelas/kabum.csv` (acumulando um snapshot por dia):
-
-```
-python tabelas.py
-```
-
-O termo buscado é definido pela variável `BUSCA` no início do arquivo.
 
 ## Como funciona a classificação
 

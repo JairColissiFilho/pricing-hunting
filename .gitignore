@@ -1,9 +1,6 @@
 __pycache__/
 *.pyc
 
-# dados coletados (gerados localmente, nao versionados)
-tabelas/*.csv
-
 # ambiente virtual, se algum dia criar um
 .venv/
 venv/
