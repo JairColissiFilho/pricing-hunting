@@ -48,6 +48,20 @@ button:disabled {
   opacity: 0.6;
   cursor: default;
 }
+#filtros {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+  font-size: 0.9rem;
+}
+#filtros select {
+  margin-left: 6px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
 #status {
   text-align: center;
   color: var(--muted);
