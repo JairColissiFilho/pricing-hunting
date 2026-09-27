@@ -1,6 +1,9 @@
 __pycache__/
 *.pyc
 
+# banco com o historico de precos (gerado localmente, nao versionado)
+precos.db
+
 # ambiente virtual, se algum dia criar um
 .venv/
 venv/
